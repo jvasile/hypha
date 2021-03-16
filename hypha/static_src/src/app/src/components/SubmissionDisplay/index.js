@@ -46,6 +46,10 @@ export default class SubmissionDisplay extends Component {
         updateSummaryEditor: PropTypes.func
     }
 
+    componentDidUpdate(){
+        document.getElementById("middle-panel").scrollTo(0, 0);
+    }
+
     render() {
         const { metaQuestions = [], questions = [], title } = this.props.submission || {};
         if (this.props.isError) {
@@ -71,7 +75,7 @@ export default class SubmissionDisplay extends Component {
         }
 
         return (
-            <div className="application-display">
+            <div className="application-display" id="middle-panel">
                     {this.props.isLoading &&
                         <InlineLoading />
                     }
