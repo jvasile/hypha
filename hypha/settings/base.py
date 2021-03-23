@@ -133,6 +133,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_api_key',
     'wagtailcache',
+    'wagtail_purge',
     'django_file_form',
 
     'hijack',
